@@ -8,214 +8,217 @@
     tools:context=".MainActivity">
 
     <FrameLayout
-        app:layout_constraintBottom_toTopOf="@id/container"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/container"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/Basic"
-            android:textSize="80sp"
-            android:textColor="@color/white"
             android:layout_gravity="bottom|end"
             android:layout_marginHorizontal="36dp"
-            android:maxLines="1"
             android:ellipsize="end"
-            />
+            android:maxLines="1"
+            android:text="@string/Basic"
+            android:textColor="@color/white"
+            android:textSize="80sp" />
 
     </FrameLayout>
 
     <LinearLayout
         android:id="@+id/container"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
-            android:paddingVertical="6dp"
-            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="6dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_clear"
                 style="@style/Gray.Button"
-                android:text="@string/ac"
                 android:onClick="onOperationClick"
-                />
+                android:text="@string/ac" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_multiplay"
-                android:onClick="onOperationClick"
                 style="@style/Gray.Button"
-                android:text="@string/multi"
                 android:layout_marginHorizontal="16dp"
-                />
+                android:onClick="onOperationClick"
+                android:text="@string/multi" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_percent"
-                android:onClick="onOperationClick"
                 style="@style/Gray.Button"
-                android:text="@string/percent"
                 android:layout_marginEnd="16dp"
-                />
+                android:onClick="onOperationClick"
+                android:text="@string/percent" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_slash"
                 style="@style/Orange.Button"
                 android:onClick="onOperationClick"
-                android:text="@string/slash"
-                />
-
-
+                android:text="@string/slash" />
 
 
         </LinearLayout>
 
         <LinearLayout
-            android:paddingVertical="6dp"
-            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="6dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_seven"
                 style="@style/Gray.Dark.Button"
                 android:onClick="onNumberClick"
-                android:text="@string/seven"
-                />
+                android:text="@string/seven" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_eight"
-                android:onClick="onNumberClick"
                 style="@style/Gray.Dark.Button"
-                android:text="@string/eight"
                 android:layout_marginHorizontal="16dp"
-                />
+                android:onClick="onNumberClick"
+                android:text="@string/eight" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_nine"
-                android:onClick="onNumberClick"
                 style="@style/Gray.Dark.Button"
-                android:text="@string/nine"
                 android:layout_marginEnd="16dp"
-                />
+                android:onClick="onNumberClick"
+                android:text="@string/nine" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_multiplication"
                 style="@style/Orange.Button"
                 android:onClick="onOperationClick"
-                android:text="@string/multiplication"
-                />
+                android:text="@string/multiplication" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:paddingVertical="6dp"
-            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="6dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_four"
-                android:onClick="onNumberClick"
                 style="@style/Gray.Dark.Button"
-                android:text="@string/four"
-                />
+                android:onClick="onNumberClick"
+                android:text="@string/four" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_five"
-                android:onClick="onNumberClick"
                 style="@style/Gray.Dark.Button"
-                android:text="@string/five"
                 android:layout_marginHorizontal="16dp"
-                />
+                android:onClick="onNumberClick"
+                android:text="@string/five" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_six"
-                android:onClick="onNumberClick"
                 style="@style/Gray.Dark.Button"
-                android:text="@string/six"
                 android:layout_marginEnd="16dp"
-                />
+                android:onClick="onNumberClick"
+                android:text="@string/six" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_minus"
-                android:onClick="onOperationClick"
                 style="@style/Orange.Button"
-                android:text="@string/minus"
-                />
+                android:onClick="onOperationClick"
+                android:text="@string/minus" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:paddingVertical="6dp"
-
-            android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="6dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_one"
 
                 style="@style/Gray.Dark.Button"
                 android:onClick="onNumberClick"
-                android:text="@string/one"
-                />
+                android:text="@string/one" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_two"
                 style="@style/Gray.Dark.Button"
-                android:text="@string/two"
-                android:onClick="onNumberClick"
                 android:layout_marginHorizontal="16dp"
-                />
+                android:onClick="onNumberClick"
+                android:text="@string/two" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_three"
                 style="@style/Gray.Dark.Button"
-                android:text="@string/three"
-                android:onClick="onNumberClick"
                 android:layout_marginEnd="16dp"
-                />
+                android:onClick="onNumberClick"
+                android:text="@string/three" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_plus"
                 style="@style/Orange.Button"
                 android:onClick="onOperationClick"
-                android:text="@string/plus"
-                />
+                android:text="@string/plus" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:paddingVertical="6dp"
-            android:gravity="center"
-            android:paddingStart="12dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="6dp"
+            android:paddingStart="12dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_zero"
                 style="@style/Gray.Dark.Button"
-                android:paddingStart="36dp"
-                android:onClick="onNumberClick"
-                android:textAlignment="textStart"
                 android:layout_width="176dp"
+                android:onClick="onNumberClick"
+                android:paddingStart="36dp"
                 android:text="@string/zero"
-                />
+                android:textAlignment="textStart" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_dot"
                 style="@style/Gray.Dark.Button"
-                android:onClick="onOperationClick"
-                android:text="@string/dot"
                 android:layout_marginHorizontal="16dp"
-                />
+                android:onClick="onOperationClick"
+                android:text="@string/dot" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_equals"
                 style="@style/Gray.Dark.Button"
-                android:text="@string/equals"
-                android:onClick="onOperationClick"
                 android:layout_marginEnd="16dp"
-                />
+                android:onClick="onOperationClick"
+                android:text="@string/equals" />
 
         </LinearLayout>
-
-
-
-
     </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cornerRadius="16dp"
+        android:textSize="20sp"
+        android:backgroundTint="@color/malina"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

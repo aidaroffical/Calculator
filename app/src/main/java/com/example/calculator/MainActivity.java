@@ -1,25 +1,37 @@
 package com.example.calculator;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
-    private double firstVar, secondVar;
+    private double firstVar = 0, secondVar = 0;
     private boolean isOperationClick;
     private String operation;
+    private Button Next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.text_view);
+        Next = findViewById(R.id.btn_next);
+        Next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                String text =textView.getText().toString();
+                intent.putExtra("key1", text);
+                startActivity(intent);
+            }
+        });
     }
 
     public void onNumberClick(View view) {
@@ -65,7 +77,14 @@ public class MainActivity extends AppCompatActivity {
         } else if (viewId == R.id.btn_equals) {
             calculateResult();
         }
+
+        if (view.getId() == R.id.btn_equals) {
+            findViewById(R.id.btn_next).setVisibility(View.VISIBLE);
+        } else {
+            findViewById(R.id.btn_next).setVisibility(View.GONE);
+        }
     }
+
 
     private void performOperation(String op) {
         firstVar = Double.parseDouble(textView.getText().toString());
